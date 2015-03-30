@@ -28,6 +28,8 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
+  'history-substring-search' \
+  'syntax-highlighting' \
   'directory' \
   'spectrum' \
   'utility' \
