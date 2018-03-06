@@ -11,3 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+MYPATH=~/bin:~/.local/bin
+MYPATH=$MYPATH:/Applications/Postgres.app/Contents/Versions/local/bin
+MYPATH=$MYPATH:/Users/marcin/Library/Android/sdk/platform-tools:$ANDROID_HOME/platform-tools:~/bin/
+export PATH=$PATH:$MYPATH
+
+if ! ps -p $PPID | grep -q java; then
+    ZSH_TMUX_AUTOSTART=true;
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
